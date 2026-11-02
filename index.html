@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Student Builder Group | IFPA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        awsDark: '#0b0f19',
+                        awsCard: '#111827',
+                        awsBlue: '#38bdf8',
+                        awsBlueHover: '#0ea5e9',
+                        awsBorder: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-awsDark min-h-screen text-slate-100 flex flex-col justify-between selection:bg-awsBlue selection:text-awsDark">
+
+    <header class="w-full border-b border-awsBorder bg-awsDark/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="#inicio" class="flex items-center space-x-2">
+                    <div class="font-display font-bold text-xl tracking-wider text-white">
+                        AWS
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-wider text-white">
+                        SBG <span class="font-display font-bold text-xl tracking-wider text-white">IFPA</span>
+                    </span>
+                </a>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                <a href="#inicio" class="hover:text-awsBlue transition-colors">Início</a>
+                <a href="#nimbus" class="hover:text-awsBlue transition-colors">Mascote</a>
+                <a href="#sobre" class="hover:text-awsBlue transition-colors">Quem Somos</a>
+                <a href="#eventos" class="hover:text-awsBlue transition-colors">Histórico de Eventos</a>
+                <a href="#equipe" class="hover:text-awsBlue transition-colors">Equipe</a>
+                <a href="#galeria" class="hover:text-awsBlue transition-colors">Galeria</a>
+                <a href="#links" class="hover:text-awsBlue transition-colors">Links Úteis</a>
+            </nav>
+
+            <div class="hidden sm:block">
+                <a href="#eventos" class="bg-awsBlue text-awsDark font-semibold px-5 py-2.5 rounded-lg hover:bg-awsBlueHover transition-all shadow-lg shadow-awsBlue/20 text-sm flex items-center space-x-2">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Ver Eventos</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative min-h-[85vh] bg-grid-pattern flex items-center overflow-hidden border-b border-awsBorder">
+        <div class="absolute right-0 top-0 bottom-0 w-1/3 hidden lg:flex flex-col justify-between pointer-events-none opacity-90">
+            <div class="bg-awsBlue w-full h-1/4 flex items-center justify-end px-10 text-awsDark font-display font-bold text-sm tracking-wide">
+                AWS Student Builder Group at IFPA
+            </div>
+            <div class="flex-1 grid grid-cols-2 h-full w-full">
+                <div class="bg-transparent border-r border-b border-awsBorder"></div>
+                <div class="bg-awsBlue flex items-center justify-center">
+                    <i class="fa-solid fa-cloud text-awsDark text-4xl opacity-30"></i>
+                </div>
+                <div class="bg-awsBlue"></div>
+                <div class="bg-transparent border-l border-t border-awsBorder"></div>
+            </div>
+            <div class="bg-awsBlue h-1/3 w-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 py-16 w-full relative z-10">
+            <div class="max-w-3xl space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-awsBorder/80 border border-awsBlue/30 px-4 py-2 rounded-full text-awsBlue font-semibold text-xs tracking-wider uppercase backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-awsBlue animate-ping"></span>
+                    <span>Comunidade Estudantil Oficial</span>
+                </div>
+
+                <h1 class="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white leading-none">
+                    Sejam bem-vindos ao <br><span class="text-awsBlue">SBG IFPA</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-slate-300 font-light max-w-2xl">
+                    Sua porta de entrada para o ecossistema de computação em nuvem da Amazon Web Services no IFPA Campus Belém. Conecte-se, aprenda e construa o futuro.
+                </p>
+
+                <div class="flex flex-wrap gap-6 pt-2 text-slate-300 text-sm">
+                    <div class="flex items-center space-x-2 bg-awsCard border border-awsBorder px-4 py-2.5 rounded-xl">
+                        <i class="fa-solid fa-location-dot text-awsBlue"></i>
+                        <span>IFPA Campus Belém</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-awsCard border border-awsBorder px-4 py-2.5 rounded-xl">
+                        <i class="fa-solid fa-users text-awsBlue"></i>
+                        <span>Tecnologia & Inovação</span>
+                    </div>
+                </div>
+
+                <div class="pt-6 flex flex-wrap gap-4">
+                    <a href="#eventos" class="bg-awsBlue text-awsDark font-bold px-8 py-4 rounded-xl hover:bg-awsBlueHover transition-all shadow-xl shadow-awsBlue/25 flex items-center space-x-3 text-base">
+                        <span>Ver Histórico de Eventos</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#sobre" class="bg-awsCard border border-awsBorder hover:border-awsBlue text-white font-medium px-6 py-4 rounded-xl transition-all flex items-center space-x-2 text-base">
+                        <span>Conhecer o SBG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Conheça o Nimbus -->
+    <section id="nimbus" class="py-24 bg-awsDark/80 border-b border-awsBorder">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-awsBlue font-semibold text-sm uppercase tracking-widest">Mascote Oficial</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Conheça o Nimbus, o mascote do SBG IFPA</h2>
+                <p class="text-slate-400">A inspiração por trás da nossa identidade e da nossa região.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-awsCard border border-awsBorder p-8 sm:p-12 rounded-3xl shadow-2xl">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden border-2 border-awsBlue/50 shadow-xl shadow-awsBlue/10 bg-awsDark flex items-center justify-center">
+                        <img src="Nimbus.png" alt="Nimbus - Mascote do AWS SBG IFPA" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-awsBlue/10 border border-awsBlue/30 px-3 py-1 rounded-full text-awsBlue text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-cat"></i>
+                        <span>Gato-Nuvem</span>
+                    </div>
+                    <p class="text-slate-300 text-lg leading-relaxed font-light">
+                        Para brincar com a ideia do contexto de “computação em nuvem”, pensamos nas nuvens do céu e tivemos a ideia de termos um <strong>gato-nuvem!</strong>
+                    </p>
+                    <p class="text-slate-300 text-lg leading-relaxed font-light">
+                        O seu nome também faz referência às nuvens já que <em>“Nimbus”</em> refere-se principalmente a um tipo de nuvem associado a chuva, fenômeno recorrente em nossa região de Belém do Pará.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-awsDark/60 border-b border-awsBorder relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl space-y-6">
+                <span class="text-awsBlue font-semibold text-sm uppercase tracking-widest">Nossa Missão</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">O que é o AWS Student Builder Group?</h2>
+                <p class="text-slate-300 leading-relaxed font-light text-lg">
+                    O <strong>AWS Student Builder Group (SBG) do IFPA</strong> é uma comunidade estudantil oficial apoiada pela Amazon Web Services no IFPA Campus Belém. Nosso propósito é democratizar o acesso à computação em nuvem, estimulando o desenvolvimento prático de habilidades em arquitetura de sistemas, DevOps, inteligência artificial e soluções serverless.
+                </p>
+                <div class="pt-4">
+                    <a href="https://bit.ly/4yPUyEv" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-awsCard border border-awsBorder hover:border-awsBlue px-6 py-3.5 rounded-xl text-white font-semibold transition-all shadow-lg">
+                        <i class="fa-solid fa-cloud text-awsBlue"></i>
+                        <span>Acessar o AWS Builder Center</span>
+                        <i class="fa-solid fa-external-link text-xs text-awsBlue"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="eventos" class="py-24 bg-awsDark border-b border-awsBorder">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="space-y-4 max-w-2xl">
+                    <span class="text-awsBlue font-semibold text-sm uppercase tracking-widest">Agenda & Memória</span>
+                    <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Histórico de Eventos</h2>
+                    <p class="text-slate-400">Acompanhe nossos eventos passados e confira os detalhes das realizações.</p>
+                </div>
+            </div>
+            <!-- primeiro evento -->
+             <!-- grid organiza os elementos em uma grade.
+            grid-cols-1 deixa uma coluna em telas pequenas.
+            md:grid-cols-2 muda para duas colunas em telas médias ou maiores.
+            gap-8 cria espaço entre os cards. -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-awsCard border border-awsBorder p-6 rounded-2xl hover:border-awsBlue/50 transition-all flex flex-col justify-between space-y-4 group">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-awsBlue font-semibold bg-awsBlue/10 px-3 py-1 rounded-full">21 de Outubro de 2026</span>
+                            <span class="bg-slate-800 text-slate-300 font-bold px-2.5 py-1 rounded-md text-[10px] uppercase tracking-wider">Realizado</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white group-hover:text-awsBlue transition-colors">Introdução à Cloud Computing</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Evento inaugural oficial do SBG IFPA. Descubra as bases da computação em nuvem com laboratórios práticos na AWS.</p>
+                    </div>
+                    <div class="pt-4 border-t border-awsBorder flex flex-col space-y-3">
+                        <div class="flex items-center space-x-1.5 text-xs text-slate-400">
+                            <i class="fa-solid fa-location-dot text-awsBlue"></i>
+                            <span>IFPA Campus Belém — Auditório Biblioteca</span>
+                        </div>
+                        <a href="https://www.meetup.com/aws-sbg-at-ifpa-federal-institute-of-para-belem-campus/events/316657945/?eventOrigin=your_eventsa" class="w-full text-center bg-awsCard border border-awsBorder hover:border-awsBlue text-white font-semibold py-2.5 rounded-xl transition-all text-xs shadow-md">
+                            Conferir detalhes do evento
+                        </a>
+                    </div>
+                </div>
+            <!-- segundo evento -->
+                <div class="bg-awsCard border border-awsBorder p-6 rounded-2xl hover:border-awsBlue/50 transition-all flex flex-col justify-between space-y-4 group">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-awsBlue font-semibold bg-awsBlue/10 px-3 py-1 rounded-full">31 de Outubro de 2026</span>
+                            <span class="bg-slate-800 text-slate-300 font-bold px-2.5 py-1 rounded-md text-[10px] uppercase tracking-wider">Realizado</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white group-hover:text-awsBlue transition-colors">AWS Community Day Brasil - Edição Norte</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Primeira edição do AWS Community Day Brasil em todas as regiões do país. Sede da região Norte é Belém.</p>
+                    </div>
+                    <div class="pt-4 border-t border-awsBorder flex flex-col space-y-3">
+                        <div class="flex items-center space-x-1.5 text-xs text-slate-400">
+                            <i class="fa-solid fa-location-dot text-awsBlue"></i>
+                            <span>Faculdade Faci Wyden</span>
+                        </div>
+                        <a href="https://www.meetup.com/aws-sbg-at-ifpa-federal-institute-of-para-belem-campus/events/317206093/?eventOrigin=your_events" class="w-full text-center bg-awsCard border border-awsBorder hover:border-awsBlue text-white font-semibold py-2.5 rounded-xl transition-all text-xs shadow-md">
+                            Conferir detalhes do evento
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipe" class="py-24 bg-awsDark/60 border-b border-awsBorder">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-awsBlue font-semibold text-sm uppercase tracking-widest">Liderança</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Conheça Nossa Equipe</h2>
+                <p class="text-slate-400">Estudantes líderes organizadores do AWS SBG no IFPA Campus Belém.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- João Lucas Carreira -->
+                <div class="bg-awsCard border border-awsBorder rounded-2xl p-6 text-center space-y-4 hover:border-awsBlue/50 transition-all group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-24 h-24 mx-auto rounded-full p-1 bg-gradient-to-tr from-awsBlue to-slate-700">
+                            <img src="coreteam/joaolucas.jpg" alt="João Lucas Carreira" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-base text-white">João Lucas Carreira</h3>
+                            <p class="text-awsBlue text-xs font-semibold mt-1">Student Builder Group Leader</p>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://www.linkedin.com/in/joão-lucas-de-souza-aragão-carreira-3191033b0" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-awsDark border border-awsBorder text-slate-300 hover:text-awsDark hover:bg-awsBlue transition-all">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- João Paulo Oliveira -->
+                <div class="bg-awsCard border border-awsBorder rounded-2xl p-6 text-center space-y-4 hover:border-awsBlue/50 transition-all group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-24 h-24 mx-auto rounded-full p-1 bg-gradient-to-tr from-awsBlue to-slate-700">
+                            <img src="coreteam/joaopaulo.jpg" alt="João Paulo Oliveira" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-base text-white">João Paulo Oliveira</h3>
+                            <p class="text-awsBlue text-xs font-semibold mt-1">Director of Marketing</p>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://www.linkedin.com/in/joão-araújo-774595407?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-awsDark border border-awsBorder text-slate-300 hover:text-awsDark hover:bg-awsBlue transition-all">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mariah Eduarda Lima -->
+                <div class="bg-awsCard border border-awsBorder rounded-2xl p-6 text-center space-y-4 hover:border-awsBlue/50 transition-all group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-24 h-24 mx-auto rounded-full p-1 bg-gradient-to-tr from-awsBlue to-slate-700">
+                            <img src="mariah.jpg" alt="Mariah Eduarda Lima" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-base text-white">Mariah Eduarda Lima</h3>
+                            <p class="text-awsBlue text-xs font-semibold mt-1">Technical Lead</p>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://www.linkedin.com/in/mariah-828-lima" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-awsDark border border-awsBorder text-slate-300 hover:text-awsDark hover:bg-awsBlue transition-all">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Maria Fernanda de Souza Pinheiro -->
+                <div class="bg-awsCard border border-awsBorder rounded-2xl p-6 text-center space-y-4 hover:border-awsBlue/50 transition-all group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-24 h-24 mx-auto rounded-full p-1 bg-gradient-to-tr from-awsBlue to-slate-700">
+                            <img src="coreteam/mariafernanda.jpg" alt="Maria Fernanda de Souza Pinheiro" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-base text-white">Maria Fernanda de Souza Pinheiro</h3>
+                            <p class="text-awsBlue text-xs font-semibold mt-1">Coordinator of Events</p>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://www.linkedin.com/in/maria-fernanda-de-souza-pinheiro-170829408?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-awsDark border border-awsBorder text-slate-300 hover:text-awsDark hover:bg-awsBlue transition-all">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Maria Fernanda Silva -->
+                <div class="bg-awsCard border border-awsBorder rounded-2xl p-6 text-center space-y-4 hover:border-awsBlue/50 transition-all group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-24 h-24 mx-auto rounded-full p-1 bg-gradient-to-tr from-awsBlue to-slate-700">
+                            <img src="coreteam/marife.jpg" alt="Maria Fernanda Silva" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-base text-white">Maria Fernanda Silva</h3>
+                            <p class="text-awsBlue text-xs font-semibold mt-1">Director of Events</p>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://www.linkedin.com/in/mariafernandasp?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-awsDark border border-awsBorder text-slate-300 hover:text-awsDark hover:bg-awsBlue transition-all">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section id="galeria" class="py-24 bg-awsDark border-b border-awsBorder">
+        <div class="max-w-5xl mx-auto px-6 space-y-20">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-awsBlue font-semibold text-sm uppercase tracking-widest">Nossos Registros</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Galeria de Eventos</h2>
+                <p class="text-slate-400 text-base">Explore os registros fotográficos organizados por cada evento realizado.</p>
+            </div>
+
+            <div class="space-y-20">
+                <!-- CARROSSEL 1: Recepção aos Calouros -->
+                <div class="space-y-6">
+                <div class="space-y-2">
+                    <h3 class="font-display font-bold text-2xl text-white">Recepção aos Calouros</h3>
+                    <p class="text-slate-400 text-sm">Junto com o Centro Acadêmico de Análise e Desenvolvimento de Sistemas (Superior) organizamos uma apresentação introdutória sobre o SBG e a AWS!</p>
+                </div>
+
+                <div class="relative bg-awsCard border border-awsBorder rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="relative h-[350px] sm:h-[450px] w-full overflow-hidden" id="track-calouros">
+                        <div class="slide-calouros absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center justify-center">
+                            <img src="calouros/foto1.jpeg" alt="Calouros 1" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Recepção aos Calouros — Foto 1</div>
+                        </div>
+                        <div class="slide-calouros absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="calouros/foto2.jpeg" alt="Calouros 2" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Recepção aos Calouros — Foto 2</div>
+                        </div>
+                        <div class="slide-calouros absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="calouros/foto3.jpeg" alt="Calouros 3" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Recepção aos Calouros — Foto 3</div>
+                        </div>
+                        <div class="slide-calouros absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="calouros/foto4.jpeg" alt="Calouros 4" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Recepção aos Calouros — Foto 4</div>
+                        </div>
+                        <div class="slide-calouros absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="calouros/foto5.jpeg" alt="Calouros 5" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Recepção aos Calouros — Foto 5</div>
+                        </div>
+                    </div>
+
+                    <button onclick="prevCalouros()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-awsDark/80 hover:bg-awsBlue text-white hover:text-awsDark p-3 rounded-full border border-awsBorder transition-all backdrop-blur-md z-20">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextCalouros()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-awsDark/80 hover:bg-awsBlue text-white hover:text-awsDark p-3 rounded-full border border-awsBorder transition-all backdrop-blur-md z-20">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                </div>
+
+                <!-- CARROSSEL 2: Evento Inaugural SBG IFPA -->
+                <div class="space-y-6">
+                <div class="space-y-2">
+                    <h3 class="font-display font-bold text-2xl text-white">Evento Inaugural SBG IFPA: Introdução à Cloud Computing</h3>
+                    <p class="text-slate-400 text-sm">Registros oficiais do nosso grande evento inaugural no Auditório do IFPA Campus Belém.</p>
+                </div>
+
+                <div class="relative bg-awsCard border border-awsBorder rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="relative h-[350px] sm:h-[450px] w-full overflow-hidden" id="track-inaugural">
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center justify-center">
+                            <img src="eventoinaugural/foto1.jpeg" alt="Inaugural 1" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Evento Inaugural — Foto 1</div>
+                        </div>
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="eventoinaugural/foto2.jpeg" alt="Inaugural 2" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Evento Inaugural — Foto 2</div>
+                        </div>
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="eventoinaugural/foto3.jpeg" alt="Inaugural 3" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Evento Inaugural — Foto 3</div>
+                        </div>
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="eventoinaugural/foto4.jpeg" alt="Inaugural 4" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Evento Inaugural — Foto 4</div>
+                        </div>
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="eventoinaugural/foto5.jpeg" alt="Inaugural 5" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">Evento Inaugural — Foto 5</div>
+                        </div>
+                    </div>
+
+                    <button onclick="prevInaugural()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-awsDark/80 hover:bg-awsBlue text-white hover:text-awsDark p-3 rounded-full border border-awsBorder transition-all backdrop-blur-md z-20">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextInaugural()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-awsDark/80 hover:bg-awsBlue text-white hover:text-awsDark p-3 rounded-full border border-awsBorder transition-all backdrop-blur-md z-20">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+                <!-- CARROSSEL 3: AWS Community Day-->
+                <div class="space-y-6">
+                <div class="space-y-2">
+                    <h3 class="font-display font-bold text-2xl text-white">AWS Community Day Brasil-Edição Norte</h3>
+                    <p class="text-slate-400 text-sm">Primeira edição do AWS Community Day Brasil em todas as regiões do país. Sede da região Norte é Belém</p>
+                </div>
+
+                <div class="relative bg-awsCard border border-awsBorder rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="relative h-[350px] sm:h-[450px] w-full overflow-hidden" id="track-inaugural">
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center justify-center">
+                            <img src="awscd/foto1.jpg" alt="Inaugural 1" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">AWS CD — Foto 1</div>
+                        </div>
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="awscd/foto2.jpg" alt="Inaugural 2" class="w-full h-full object-cover">
+                            <div class="absolute bottom-9 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">AWS CD — Foto 2</div>
+                        </div>
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="awscd/foto3.jpg" alt="Inaugural 3" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">AWS CD — Foto 3</div>
+                        </div>
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="awscd/foto4.jpg" alt="Inaugural 4" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">AWS CD — Foto 4</div>
+                        </div>
+                        <div class="slide-inaugural absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                            <img src="awscd/foto5.jpg" alt="Inaugural 5" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-awsDark/80 backdrop-blur-md px-4 py-2 rounded-xl border border-awsBorder text-xs text-slate-300">AWS CD — Foto 5</div>
+                        </div>
+                    </div>
+
+                    <button onclick="prevCD()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-awsDark/80 hover:bg-awsBlue text-white hover:text-awsDark p-3 rounded-full border border-awsBorder transition-all backdrop-blur-md z-20">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextCD()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-awsDark/80 hover:bg-awsBlue text-white hover:text-awsDark p-3 rounded-full border border-awsBorder transition-all backdrop-blur-md z-20">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="links" class="py-24 bg-awsDark/60 border-b border-awsBorder">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-awsBlue font-semibold text-sm uppercase tracking-widest">Conecte-se</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Links Úteis e Comunidade</h2>
+                <p class="text-slate-400">Acompanhe nossas novidades e faça parte da nossa comunidade oficial.</p>
+            </div>
+
+            <div class="max-w-md mx-auto grid grid-cols-1 gap-6">
+                <a href="https://www.instagram.com/aws.sbg.ifpa/" target="_blank" rel="noopener noreferrer" class="bg-awsCard border border-awsBorder hover:border-awsBlue p-6 rounded-2xl transition-all flex items-center space-x-4 group shadow-lg">
+                    <div class="w-12 h-12 bg-awsBlue/10 text-awsBlue rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-base">Instagram Oficial</h3>
+                        <p class="text-slate-400 text-xs">@aws.sbg.ifpa</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-awsDark py-12 border-t border-awsBorder text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div class="flex items-center space-x-3">
+                <span class="font-display font-bold text-xl text-white">
+                    <span class="text-awsBlue">AWS</span> SBG
+                </span>
+                <span class="text-slate-600">|</span>
+                <span>IFPA Campus Belém © 2026</span>
+            </div>
+            <div class="flex items-center space-x-6 text-lg">
+                <a href="https://www.instagram.com/aws.sbg.ifpa/" target="_blank" rel="noopener noreferrer" class="hover:text-awsBlue transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
